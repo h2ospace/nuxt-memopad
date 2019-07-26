@@ -34,8 +34,7 @@ export default {
   */
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt',
-    '@nuxtjs/eslint-module'
+    'bootstrap-vue/nuxt'
   ],
   /*
   ** Build configuration
