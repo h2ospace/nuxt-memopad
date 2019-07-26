@@ -14,3 +14,9 @@ export const mutations = {
         return state.memos.find(id => id == id)
     }
 }
+
+export const getters = {
+    all(state) {
+        return state.memos;
+    }
+}

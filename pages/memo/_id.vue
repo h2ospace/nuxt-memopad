@@ -1,14 +1,15 @@
 <template>
-    {{ memo.text }}
+<div>
+{{ memo.text }}
+</div>
 </template>
 
 <script>
 export default {
-    data: function() {
-        memo: [
-            id: 1,
-            text: 'test'
-    ]
+    computed: {
+        memo: function() {
+            return this.$store.getters.all('memo')
+        }
     }
 }
 </script>

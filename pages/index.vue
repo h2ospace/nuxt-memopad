@@ -2,7 +2,7 @@
   <div class="container">
     <Logo/>
     <ul>
-      <li v-for="memo in memos"><nuxt-link :to="{name: 'memo-id', params:{id: memo.id}}">{{ memo.text }}</nuxt-link></li>
+      <li :key="memo.id" v-for="memo in $store.getters['memo/all']"><nuxt-link :to="{name: 'memo-id', params:{id: memo.id}}">{{ memo.text }}</nuxt-link></li>
     </ul>
     <nuxt-link to="/add">Add</nuxt-link>
   </div>
@@ -16,9 +16,6 @@ export default {
     Logo
   },
   computed: {
-    memos () {
-      return this.$store.state.memo.memos;
-    }
   }
 }
 </script>
